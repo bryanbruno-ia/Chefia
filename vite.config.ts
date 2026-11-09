@@ -31,7 +31,9 @@ export default defineConfig(async ({ command, mode }) => {
     ...(command === "build"
       ? [
           nitro({
-            defaultPreset: "cloudflare-module",
+            // Usa preset Vercel quando VERCEL=1 (injetado automaticamente pela Vercel),
+            // caso contrário usa cloudflare-module para deploy no Cloudflare Workers.
+            defaultPreset: process.env.VERCEL === "1" ? "vercel" : "cloudflare-module",
           }),
         ]
       : []),

@@ -7,18 +7,23 @@ const HERO_IMG = "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "ChefIA — sua cozinha, suas regras" },
+      { title: "ChefIA | Sua próxima receita começa aqui" },
       {
         name: "description",
-        content: "Descubra receitas incríveis com o que você já tem em casa.",
+        content:
+          "Descubra receitas deliciosas com os ingredientes que você já tem em casa. Busca inteligente, favoritos e culinária facilitada para o dia a dia.",
       },
-      { property: "og:title", content: "ChefIA — sua cozinha, suas regras" },
+      { property: "og:title", content: "ChefIA | Sua próxima receita começa aqui" },
       {
         property: "og:description",
-        content: "Descubra receitas incríveis com o que você já tem em casa.",
+        content:
+          "Descubra receitas deliciosas com os ingredientes que você já tem em casa. Busca inteligente, favoritos e culinária facilitada para o dia a dia.",
       },
+      { property: "og:image", content: "https://chefia-navy.vercel.app/og-image.png" },
+      { property: "og:url", content: "https://chefia-navy.vercel.app" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://chefia-navy.vercel.app/og-image.png" },
     ],
     links: [
       // Preload reforçado na rota: o browser recebe o hint antes mesmo de

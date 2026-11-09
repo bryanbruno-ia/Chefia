@@ -79,14 +79,38 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "ChefIA" },
-      { name: "description", content: "Receitas com o que você tem em casa." },
+      { title: "ChefIA | Sua próxima receita começa aqui" },
+      {
+        name: "description",
+        content:
+          "Descubra receitas deliciosas com os ingredientes que você já tem em casa. Busca inteligente, favoritos e culinária facilitada para o dia a dia.",
+      },
       { name: "author", content: "ChefIA" },
-      { property: "og:title", content: "ChefIA" },
-      { property: "og:description", content: "Receitas com o que você tem em casa." },
+      // ── Open Graph ───────────────────────────────────────────────────
+      { property: "og:title", content: "ChefIA | Sua próxima receita começa aqui" },
+      {
+        property: "og:description",
+        content:
+          "Descubra receitas deliciosas com os ingredientes que você já tem em casa. Busca inteligente, favoritos e culinária facilitada para o dia a dia.",
+      },
       { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://chefia-navy.vercel.app/og-image.png" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:alt", content: "ChefIA — Sua próxima receita começa aqui" },
+      { property: "og:url", content: "https://chefia-navy.vercel.app" },
+      { property: "og:locale", content: "pt_BR" },
+      // ── Twitter / X Card ────────────────────────────────────────────
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@ChefIA" },
+      { name: "twitter:title", content: "ChefIA | Sua próxima receita começa aqui" },
+      {
+        name: "twitter:description",
+        content:
+          "Descubra receitas deliciosas com os ingredientes que você já tem em casa. Busca inteligente, favoritos e culinária facilitada para o dia a dia.",
+      },
+      { name: "twitter:image", content: "https://chefia-navy.vercel.app/og-image.png" },
+      { name: "twitter:image:alt", content: "ChefIA — Sua próxima receita começa aqui" },
     ],
     links: [
       {
