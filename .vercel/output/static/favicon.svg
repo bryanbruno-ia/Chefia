@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <!-- Fundo arredondado verde escuro (mesma cor do brand-mark) -->
+  <rect width="32" height="32" rx="8" fill="#142b22"/>
+  <!-- Chapéu de chef: topo abaulado -->
+  <ellipse cx="16" cy="13" rx="7.5" ry="5.5" fill="#f4ead6"/>
+  <!-- Prega central do chapéu -->
+  <rect x="14.5" y="10" width="3" height="8" rx="1.5" fill="#f4ead6"/>
+  <!-- Aba do chapéu -->
+  <rect x="9" y="17" width="14" height="3" rx="1.5" fill="#f4ead6"/>
+  <!-- Detalhe dourado na aba -->
+  <rect x="9" y="17" width="14" height="1.2" rx="0.6" fill="#d9a45b"/>
+</svg>

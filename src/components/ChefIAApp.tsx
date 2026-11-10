@@ -421,7 +421,7 @@ function App() {
       : generated.length
         ? generated
         : recipesData;
-    if (!showFavorites && !generated.length && appliedIngredients.length)
+    if (!showFavorites && appliedIngredients.length)
       list = list.filter((r) => matchesIngredients(r.ingredients, appliedIngredients, searchMode));
     if (activeCategory !== "Todas") list = list.filter((r) => r.category === activeCategory);
     if (debouncedSearch.trim()) {
@@ -473,8 +473,8 @@ function App() {
         setGenerated([]);
       }
       setActiveCategory("Todas");
+      setAppliedIngredients(dedupeIngredients(ingredients));
       navigate("recipes");
-      if (!api) setAppliedIngredients(dedupeIngredients(ingredients));
     } catch (error) {
       alert(error.message || "Ocorreu um erro ao gerar receitas.");
     } finally {
@@ -571,8 +571,10 @@ function App() {
                 Frescor em <em>cada mordida.</em>
               </h1>
               <p className="hero-subtitle">
-                Receitas criadas com ingredientes frescos, combinações surpreendentes e um toque de
-                criatividade para transformar sua cozinha.
+                Nosso site é focado em receitas mais elaboradas e diferenciadas, por isso não
+                disponibilizamos receitas básicas do dia a dia, como arroz, feijão e outros pratos
+                simples. Nosso objetivo é apresentar opções variadas para quem deseja experimentar
+                novos sabores e descobrir novas formas de cozinhar.
               </p>
               <div className="hero-actions">
                 <button onClick={() => navigate("recipes")} className="button button-primary">
